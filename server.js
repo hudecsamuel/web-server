@@ -4,7 +4,6 @@ var PORT = process.env.PORT || 3001;
 
 var middleware = require('./middleware');
 
-// app.use(middleware.requireAuthentication);
 app.use(middleware.logger);
 
 app.get('/about', middleware.requireAuthentication, function(req, res){
